@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+
+actor User
+actor Admin
+
+rectangle System {
+    User -- (Login)
+    User -- (Register)
+    User -- (View Products)
+    User -- (Add to Cart)
+    User -- (Checkout)
+    
+    Admin -- (Login)
+    Admin -- (Manage Products)
+    Admin -- (View Orders)
+}
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+actor User
+participant "System" as System
+
+User -> System : Request to perform action
+System -> User : Provide response
+User -> System : Submit data
+System -> User : Acknowledge submission
+System -> System : Process data
+System -> User : Return results
+
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+|User|
+start
+:Login;
+:Select Product;
+:Add to Cart;
+:Proceed to Checkout;
+|System|
+:Validate Payment;
+:Generate Invoice;
+:Send Confirmation Email;
+|User|
+:Receive Confirmation;
+stop
+@enduml

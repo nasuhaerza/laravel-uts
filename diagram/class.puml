@@ -1,0 +1,34 @@
+@startuml
+class User {
+    +String username
+    +String password
+    +login()
+    +logout()
+}
+
+class Product {
+    +String name
+    +double price
+    +int stock
+    +addProduct()
+    +removeProduct()
+}
+
+class Order {
+    +int orderId
+    +Date orderDate
+    +double totalAmount
+    +createOrder()
+    +cancelOrder()
+}
+
+class Payment {
+    +String paymentMethod
+    +double amount
+    +processPayment()
+}
+
+User "1" -- "0..*" Order : places >
+Order "1" -- "1..*" Product : contains >
+Order "1" -- "1" Payment : uses >
+@enduml
